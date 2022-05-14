@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="homeContext" prefHeight="604.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeFormController">
+   <children>
+      <ImageView fitHeight="604.0" fitWidth="1055.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/home.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="604.0" prefWidth="1055.0" style="-fx-background-color: #2c3e50; -fx-opacity: 15%;">
+         <effect>
+            <DropShadow height="118.64" radius="52.91" width="95.0" />
+         </effect>
+      </AnchorPane>
+      <Label layoutX="229.0" layoutY="227.0" text="WELCOME TO BLUE OCEAN" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="47.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="428.0" layoutY="276.0" text="HOTEL" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="74.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="815.0" layoutY="16.0" onAction="#goToAboutPage" ripplerFill="WHITE" text="About" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow height="41.22" radius="34.4925" width="98.75" />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="885.0" layoutY="17.0" ripplerFill="WHITE" text="Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow height="41.22" radius="34.4925" width="98.75" />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="957.0" layoutY="17.0" onAction="#goToLoginPage" ripplerFill="WHITE" text="LogIn As" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow height="41.22" radius="34.4925" width="98.75" />
+         </effect>
+      </JFXButton>
+      <Separator layoutX="883.0" layoutY="22.0" orientation="VERTICAL" prefHeight="22.0" prefWidth="5.0" />
+      <Separator layoutX="952.0" layoutY="22.0" orientation="VERTICAL" prefHeight="22.0" prefWidth="5.0" />
+      <Label layoutX="498.0" layoutY="579.0" text="Version 1.1.2" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Separator layoutX="21.0" layoutY="588.0" prefHeight="3.0" prefWidth="465.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Separator>
+      <Separator layoutX="604.0" layoutY="590.0" prefHeight="3.0" prefWidth="437.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Separator>
+   </children>
+</AnchorPane>

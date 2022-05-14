@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="availabilityContext" prefHeight="604.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AvailabilityFormController">
+   <children>
+      <ImageView fitHeight="604.0" fitWidth="1055.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/Check_Room_Availability.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="604.0" prefWidth="1055.0" style="-fx-background-color: #2c3e50; -fx-opacity: 15%;">
+         <effect>
+            <DropShadow height="118.64" radius="52.91" width="95.0" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="53.0" layoutY="155.0" prefHeight="31.0" prefWidth="305.0" style="-fx-background-color: white; -fx-background-radius: 25; -fx-opacity: 65%;" />
+      <AnchorPane layoutX="813.0" layoutY="99.0" prefHeight="70.0" prefWidth="208.0" style="-fx-background-color: white; -fx-background-radius: 25; -fx-opacity: 35%;" />
+      <Text fx:id="label2" boundsType="VISUAL" fontSmoothingType="LCD" layoutX="897.0" layoutY="149.0" strokeLineCap="BUTT" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="450.0000010728836">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+         <effect>
+            <DropShadow height="126.73" radius="48.8725" width="70.76" />
+         </effect>
+      </Text>
+      <Label layoutX="259.0" layoutY="41.0" text="Check Room Availability" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+         <effect>
+            <DropShadow radius="35.0" width="121.0" />
+         </effect>
+      </Label>
+      <TableView fx:id="tblAvailability" layoutX="663.0" layoutY="207.0" prefHeight="313.0" prefWidth="294.0" style="-fx-background-radius: 10; -fx-opacity: 80%;">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="140.0" text="Room id" />
+          <TableColumn fx:id="colAvailable" minWidth="0.0" prefWidth="211.0" text="Available" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="49.0" layoutY="344.0" opacity="0.7" prefHeight="170.0" prefWidth="313.0" style="-fx-background-color: #34495E; -fx-background-radius: 25;" />
+      <Label fx:id="roomCost" layoutX="277.0" layoutY="354.0" prefHeight="26.0" prefWidth="88.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="27.0" layoutY="25.0" onAction="#backOnAction" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: #34495E; -fx-background-radius: 7;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnBooking" buttonType="RAISED" layoutX="921.0" layoutY="538.0" onAction="#bookingOnAction" style="-fx-background-color: #2ecc71; -fx-background-radius: 7;" text="Booking" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="52.0" layoutY="262.0" prefHeight="70.0" prefWidth="305.0" style="-fx-background-color: white; -fx-background-radius: 25; -fx-opacity: 65%;">
+         <children>
+            <JFXDatePicker fx:id="d2" layoutX="170.0" layoutY="17.0" onAction="#d2SelectOnAction" prefHeight="31.0" prefWidth="107.0" />
+            <JFXDatePicker fx:id="d1" layoutX="28.0" layoutY="18.0" onAction="#d1SelectOnAction" prefHeight="31.0" prefWidth="118.0" />
+         </children></AnchorPane>
+      <JFXComboBox fx:id="cmbRoom" layoutX="64.0" layoutY="153.0" onAction="#roomTypeOnAction" prefHeight="31.0" prefWidth="280.0" promptText="Room Type" />
+      <AnchorPane layoutX="52.0" layoutY="217.0" prefHeight="31.0" prefWidth="305.0" style="-fx-background-color: white; -fx-background-radius: 25; -fx-opacity: 65%;" />
+      <JFXComboBox fx:id="cmbMealPackage" layoutX="64.0" layoutY="215.0" onAction="#selectMealPackOnAction" prefHeight="31.0" prefWidth="280.0" promptText="Select Meal Packge" />
+      <Label layoutX="61.0" layoutY="421.0" text="Full Cost" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="353.0" text="Room Cost" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="389.0" text="Meal Package Cost" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="375.0" layoutY="217.0" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: white; -fx-background-radius: 25; -fx-opacity: 65%;" />
+      <JFXComboBox fx:id="cmbMealName" layoutX="387.0" layoutY="215.0" onMouseClicked="#mealNameClick" prefHeight="31.0" prefWidth="136.0" promptText="Meal Name" />
+      <Label layoutX="229.0" layoutY="354.0" prefHeight="26.0" prefWidth="48.0" text=": Rs :-" textFill="RED">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="229.0" layoutY="389.0" prefHeight="26.0" prefWidth="48.0" text=": Rs :-" textFill="RED">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="229.0" layoutY="421.0" prefHeight="26.0" prefWidth="48.0" text=": Rs :-" textFill="RED">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="215.0" layoutY="538.0" onAction="#paymentNowOnAction" style="-fx-background-color: #7ed6df; -fx-background-radius: 9;" text="Paymet Now" />
+      <JFXButton buttonType="RAISED" layoutX="69.0" layoutY="538.0" onAction="#paymentAfterOnAction" style="-fx-background-color: #30336b; -fx-background-radius: 9;" text="Paymet After" textFill="WHITE" />
+      <Text fx:id="label3" boundsType="VISUAL" fontSmoothingType="LCD" layoutX="827.0" layoutY="128.0" strokeLineCap="BUTT" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="87.99999421834946">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow height="126.73" radius="48.8725" width="70.76" />
+         </effect>
+      </Text>
+      <Label fx:id="mealPackageCost" layoutX="277.0" layoutY="389.0" prefHeight="26.0" prefWidth="69.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="fullCost" layoutX="277.0" layoutY="420.0" prefHeight="26.0" prefWidth="69.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnRefresh" buttonType="RAISED" layoutX="126.0" layoutY="461.0" onAction="#refresh" prefHeight="33.0" prefWidth="136.0" style="-fx-background-color: #778beb; -fx-background-radius: 7;" text="Calculate">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
