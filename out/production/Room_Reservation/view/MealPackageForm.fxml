@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mealPackageContext" prefHeight="604.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MealPackageFormController">
+   <children>
+      <ImageView fitHeight="613.0" fitWidth="1055.0" layoutY="-3.0">
+         <image>
+            <Image url="@../assets/Meal_Package.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="21.0" layoutY="20.0" onAction="#backOnAction" prefHeight="31.0" prefWidth="61.0" style="-fx-background-color: #34495E; -fx-background-radius: 7;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="329.0" layoutY="51.0" text="MEALS PACKAGE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+         <effect>
+            <DropShadow height="175.5" radius="93.625" width="201.0" />
+         </effect>
+      </Label>
+      <AnchorPane layoutX="89.0" layoutY="192.0" opacity="0.8" prefHeight="31.0" prefWidth="223.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
+      <AnchorPane layoutX="90.0" layoutY="239.0" opacity="0.7" prefHeight="31.0" prefWidth="223.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
+      <JFXComboBox fx:id="cmbMealsType" layoutX="99.0" layoutY="192.0" prefHeight="31.0" prefWidth="203.0" promptText="Meals Type" />
+      <JFXComboBox fx:id="cmbMealTime" layoutX="100.0" layoutY="239.0" prefHeight="31.0" prefWidth="203.0" promptText="Times" />
+      <JFXButton buttonType="RAISED" layoutX="955.0" layoutY="16.0" onAction="#newOnAction" prefHeight="39.0" prefWidth="80.0" style="-fx-background-color: #2ecc71; -fx-background-radius: 7;" text="+New" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtNo" layoutX="90.0" layoutY="145.0" promptText="Meal No" style="-fx-background-color: white; -fx-background-radius: 7; -fx-padding: 6;" />
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="869.0" layoutY="190.0" onAction="#saveOnAction" prefHeight="39.0" prefWidth="164.0" style="-fx-background-color: #16a085; -fx-background-radius: 7;" text="Save Meal" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtName" layoutX="293.0" layoutY="145.0" promptText="Meal Name" style="-fx-background-color: white; -fx-background-radius: 7; -fx-padding: 6;" />
+      <JFXTextField fx:id="txtPrice" layoutX="350.0" layoutY="192.0" prefHeight="31.0" prefWidth="90.0" promptText="Price" style="-fx-background-color: white; -fx-background-radius: 7; -fx-padding: 6;" />
+      <ImageView fitHeight="222.0" fitWidth="223.0" layoutX="89.0" layoutY="302.0" opacity="0.57" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/Meals.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblMealPackages" layoutX="349.0" layoutY="238.0" prefHeight="345.0" prefWidth="684.0" style="-fx-opacity: 80%;">
+         <columns>
+            <TableColumn fx:id="colNo" prefWidth="89.0" text="Meal No" />
+            <TableColumn fx:id="colType" prefWidth="137.0" text="Meal Type" />
+            <TableColumn fx:id="colName" prefWidth="128.0" text="Meal Name" />
+            <TableColumn fx:id="colTime" prefWidth="122.0" text="Time" />
+            <TableColumn fx:id="colPrice" prefWidth="99.0" text="Price" />
+            <TableColumn fx:id="colDelete" prefWidth="122.0" text="Delete" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

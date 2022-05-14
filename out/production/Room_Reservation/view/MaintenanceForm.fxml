@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="maintenanceContext" prefHeight="604.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MaintenanceFormController">
+   <children>
+      <ImageView fitHeight="604.0" fitWidth="1055.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Maintances.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="350.0" layoutY="62.0" text="MAINTENANCE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+         <effect>
+            <DropShadow radius="17.5" width="51.0" />
+         </effect>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="24.0" onAction="#backOnAction" prefHeight="31.0" prefWidth="63.0" style="-fx-background-color: #34495E; -fx-background-radius: 7;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="107.0" layoutY="24.0" onAction="#homeOnAction" style="-fx-background-color: #34495E; -fx-background-radius: 7;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#34495e" height="271.0" layoutY="333.0" opacity="0.36" stroke="BLACK" strokeType="INSIDE" width="1055.0" />
+      <AnchorPane layoutX="45.0" layoutY="200.0" opacity="0.26" prefHeight="125.0" prefWidth="113.0" style="-fx-background-color: white; -fx-background-radius: 25;" />
+      <TableView fx:id="tblRooms" layoutX="443.0" layoutY="216.0" prefHeight="333.0" prefWidth="557.0">
+         <columns>
+            <TableColumn fx:id="colRoomNo" prefWidth="133.0" text="Room Id" />
+            <TableColumn fx:id="colAvailability" prefWidth="217.0" text="Availability" />
+            <TableColumn fx:id="colButton" prefWidth="206.0" text="Make Available" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="80.0" layoutY="363.0" opacity="0.66" prefHeight="104.0" prefWidth="279.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="25.0" layoutY="17.0">
+               <image>
+                  <Image url="@../assets/call_icon.png" />
+               </image>
+               <effect>
+                  <DropShadow height="33.44" radius="33.3225" width="101.85" />
+               </effect>
+            </ImageView>
+            <Label layoutX="78.0" layoutY="22.0" text="Call us directly at">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label layoutX="78.0" layoutY="72.0" text="See all numbers and locations" textFill="#3498db">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow height="33.44" radius="33.3225" width="101.85" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="txtRoomNo" labelFloat="true" layoutX="41.0" layoutY="95.0" promptText="Room Id">
+         <font>
+            <Font name="Berlin Sans FB" size="17.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXTextField>
+      <Label layoutX="152.0" layoutY="406.0" text="+353 1 512 4400" textFill="#3498db">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow height="33.44" radius="33.3225" width="101.85" />
+         </effect>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="60.0" layoutY="215.0" onAction="#saveOnAction" style="-fx-background-color: #33d9b2;" text="Confirm" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="62.0" layoutY="280.0" onAction="#refreshOnAction" style="-fx-background-color: #778beb;" text="Refresh">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="51.0" layoutY="334.0" text="Note- Refresh to Load Previous Data" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow height="64.54" radius="23.995" width="33.44" />
+         </effect>
+      </Label>
+      <AnchorPane layoutX="82.0" layoutY="485.0" opacity="0.66" prefHeight="104.0" prefWidth="279.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="48.0" layoutY="13.0" text="BLUE OCEAN HOTEL" textFill="#3498db">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow height="52.1" radius="22.439999999999998" width="39.66" />
+               </effect>
+            </Label>
+            <Label layoutX="18.0" layoutY="66.0" text="Colombo 00200" textFill="#1a3243">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow height="52.1" radius="22.439999999999998" width="39.66" />
+               </effect>
+            </Label>
+            <Label layoutX="16.0" layoutY="44.0" text="2 Sir Chittampalam A Gardiner Mawatha, " textFill="#1a3243">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow height="52.1" radius="22.439999999999998" width="39.66" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="35.0" layoutY="144.0" opacity="0.14" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: #34495E; -fx-background-radius: 25; -fx-opacity: 80%;" />
+      <JFXComboBox fx:id="cmbAvailability" layoutX="46.0" layoutY="141.0" prefHeight="31.0" prefWidth="130.0" promptText="Availability" unFocusColor="#30465b">
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXComboBox>
+   </children>
+</AnchorPane>
